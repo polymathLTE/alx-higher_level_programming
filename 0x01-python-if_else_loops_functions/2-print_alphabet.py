@@ -7,7 +7,7 @@ def print_lowerAlpha():
     not followed by new line
     '''
     for c in range(97, 122):
-        print(chr(c), end="")
+        print("{}".format(chr(c)), end="")
 
 
 print_lowerAlpha()
