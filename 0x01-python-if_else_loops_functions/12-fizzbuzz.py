@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Author - Lawal Emmanuel
+# Author - Lawal Emmanuel
 
 def fizzbuzz():
     """
@@ -16,5 +16,4 @@ def fizzbuzz():
         elif i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz", end=' ')
         else:
-            print("{}".format(), end=' '
-
+            print("{}".format(), end=' ')
