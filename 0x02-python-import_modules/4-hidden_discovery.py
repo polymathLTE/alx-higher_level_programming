@@ -1,4 +1,4 @@
-#!/usr/bin/python3.8
+#!/usr/bin/python3
 # Author - Lawal Emmanuel
 
 if __name__ == '__main__':
