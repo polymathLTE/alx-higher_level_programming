@@ -3,7 +3,7 @@
 
 # prevents execution if imported
 if __name__ == '__main__':
-    # import required files
+    """Print the sum, difference, product and quotient of 10 and 5"""
     from calculator_1 import add, sub, mul, div
     # init. variables
     a = 10
