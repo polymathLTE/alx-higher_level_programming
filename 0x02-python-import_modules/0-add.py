@@ -6,7 +6,7 @@
 # sys.path.append("./test_files")
 
 # import required modules
-import add_0 as ad
+from add_0 import add
 
 # block execution if imported
 if __name__ == '__main__':
@@ -15,4 +15,4 @@ if __name__ == '__main__':
     b = 2
 
     # display format = <a value> + <b value> = <add(a, b) value>
-    print("{} + {} = {}".format(a, b, ad.add(a, b)))
+    print("{} + {} = {}".format(a, b, add(a, b)))
