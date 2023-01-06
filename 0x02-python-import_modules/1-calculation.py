@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 # Author - Lawal Emmanuel
 
-# import test files
-# import sys
-# sys.path.append("./test_files")
-
-
 # prevents execution if imported
 if __name__ == '__main__':
     # import required files
