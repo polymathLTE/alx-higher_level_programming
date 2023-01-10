@@ -4,7 +4,7 @@
 def no_c(my_string):
     """function that removes all characters c and C from a string """
     ret_string = ''
-    for i in range(len(my_string)3):
+    for i in range(len(my_string)):
         if my_string[i] == 'c' or my_string[i] == 'C':
             continue
         else:
