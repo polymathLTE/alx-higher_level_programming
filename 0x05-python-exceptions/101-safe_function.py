@@ -3,6 +3,7 @@
 
 import sys
 
+
 def safe_function(fct, *args):
     """
     function that executes a function safely
