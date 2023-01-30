@@ -46,8 +46,9 @@ class Square:
 
     def my_print(self):
         """ that prints in stdout the square with the character # """
-        out = '#'
+        if self._size == 0:
+            print()
         for i in range(self._size):
             for j in range(self._size):
-                print("{}".format(out), end="")
+                print("#", end="")
             print()
