@@ -7,7 +7,7 @@
 class Square:
     """ defines a square by attributes """
     def __init__(self, size=0):
-        """ this is instatiation code
+        """Square instatiation code
 
         Args:
             size (int): given size of the square
