@@ -82,9 +82,10 @@ class Rectangle:
         for i in range(hgt):
         #    [print(self.print_symbol, end='') for j in range(wid)]
         #    print()
-           [apv.append(str(self.print_symbol)) for j in range(wid)]
-           if i + 1 == wid:
-               apv.append('\n')
+            j = 0
+            [apv.append(str(self.print_symbol)) for j in range(wid)]
+            if j + 1 == wid:
+                apv.append('\n')
         return ("".join(apv))
 
     def __repr__(self):
