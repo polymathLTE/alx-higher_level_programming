@@ -76,6 +76,8 @@ class Rectangle:
         if wid == 0 or hgt == 0:
             return ""
         for i in range(hgt):
+            j = 0
             [apv.append('#') for j in range(wid)]
-            apv.append('\n')
+            if i != hgt - 1:
+                apv.append('\n')
         return "".join(apv)
