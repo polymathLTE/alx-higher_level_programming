@@ -116,6 +116,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ changes the instance variables - to a square"""
-        cls.height = size
-        cls.width = size
-        return cls(cls.width, cls.height)
+        return cls(size, size)
