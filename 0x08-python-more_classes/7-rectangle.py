@@ -80,13 +80,10 @@ class Rectangle:
         if wid == 0 or hgt == 0:
             return ""
         for i in range(hgt):
-        #    [print(self.print_symbol, end='') for j in range(wid)]
-        #    print()
-            j = 0
             [apv.append(str(self.print_symbol)) for j in range(wid)]
-            if j + 1 == wid:
+            if i != hgt - 1:
                 apv.append('\n')
-        return ("".join(apv))
+        return "".join(apv)
 
     def __repr__(self):
         """returns a canonical representation of the rect. obj;

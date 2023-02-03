@@ -70,14 +70,16 @@ class Rectangle:
         Returns:
             displays a size representation of rect obj using '#
         """
+        apv = []
         wid = self._width
         hgt = self._height
         if wid == 0 or hgt == 0:
             return ""
         for i in range(hgt):
-            [print('#', end='') for j in range(wid)]
-            print()
-        return ""
+            [apv.append('#') for j in range(wid)]
+            if i != hgt - 1:
+                apv.append('\n')
+        return "".join(apv)
 
     def __repr__(self):
         """returns a canonical representation of the rect. obj;
