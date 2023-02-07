@@ -3,6 +3,5 @@
 
 def write_file(filename="", text=""):
     """writes a given text into specified file"""
-    with open(filename, 'w') as file_op:
-        file_op.write(text)
-    return len(text)
+    with open(filename, 'w', encoding='utf-8') as file_op:
+        return file_op.write(text)
