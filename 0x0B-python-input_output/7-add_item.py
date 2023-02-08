@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # Author - Lawal Emmanuel
 
+"""script to append provided arguments to json file"""
+
+
 # import libraries
 import sys
 import json

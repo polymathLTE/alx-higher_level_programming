@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # Author - Lawal Emmanuel
 
+"""Defines a string to json function"""
+
+
 import json
 
 

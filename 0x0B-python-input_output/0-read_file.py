@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # Author - Lawal Emmanuel
 
+"""Defines a readfile function"""
+
+
 def read_file(filename=""):
     """displays the content from a given file"""
     with open(filename, 'r', encoding='utf-8') as file_op:

@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 # Author - Lawal Emmanuel
+
+"""Defines a function that loads a json obj form file"""
+
+
 import json
 
 
