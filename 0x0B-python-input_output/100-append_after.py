@@ -2,9 +2,12 @@
 # Author - Lawal Emmanuel
 
 """Defines a function"""
+
+
 def append_after(filename="", search_string="", new_string=""):
     """
-    inserts a line of text to a file, after each line containing a specific string
+    inserts a line of text to a file, after each line
+    containing a specific string
     Args:
         filename (string): the file to be written into
         search_string (string): the string to be searched for
