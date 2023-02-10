@@ -37,6 +37,6 @@ class Student:
         Args:
             json (dict): its content replaces the attrs of the instance
         """
-        for i in json.keys():
-            if hasattr(self, i):
-                self.i = json.get(i)
+        for k, v in json.items():
+            if hasattr(self, k):
+                setattr(self, k, v)
