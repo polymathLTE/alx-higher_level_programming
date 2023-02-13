@@ -6,7 +6,8 @@
 Unittest classes:
     TestRectangle_initzn
     TestRectangle_width
-
+    TestRectangle_height
+    TestRectangle_
 """
 import unittest
 from models.rectangle import Rectangle
