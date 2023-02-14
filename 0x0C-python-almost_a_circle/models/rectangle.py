@@ -61,9 +61,9 @@ class Rectangle(Base):
         Args:
             value (int): the new height to be set
         """
-        if type(height) != int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -78,9 +78,9 @@ class Rectangle(Base):
         Args:
             value (int): the new x to be set
         """
-        if type(x) != int:
+        if type(value) != int:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
@@ -95,9 +95,9 @@ class Rectangle(Base):
         Args:
             value (int): the new y to be set
         """
-        if type(y) != int:
+        if type(value) != int:
             raise TypeError("y must be an integer")
-        if y < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -107,6 +107,47 @@ class Rectangle(Base):
 
     def display(self):
         """displays the size of Rect. obj. using '# """
+        [print() for i in range(self.__y) if self.__y > 0]
         for i in range(self.height):
+            [print(' ', end="") for k in range(self.x) if self.__x > 0]
             [print('#', end="") for j in range(self.width)]
             print()
+
+    def __str__(self):
+        """returns a readable representation of the Rect. class
+        Return:
+            [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        msg = "Rectangle ({}) {}/{} - {}/{}"
+        return msg.format(self.id, self.__x,
+                          self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """this updates the class by singular attr. or a dictionary
+        of attrs
+        Args:
+            args (list): list of attributes to be updated
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            kwargs (dict): dictionary of items to be updated
+        """
+        if len(args) > 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    self.id = arg
+                elif a == 1:
+                    self.__width = arg
+                elif a == 2:
+                    self.__height = arg
+                elif a == 3:
+                    self.__x = arg
+                elif a == 4:
+                    self.__y = arg
+                a += 1
+        elif len(args) == 0 and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
