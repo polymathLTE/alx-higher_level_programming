@@ -109,8 +109,8 @@ class Rectangle(Base):
         """displays the size of Rect. obj. using '# """
         [print() for i in range(self.__y) if self.__y > 0]
         for i in range(self.height):
-            [print(' ', end="") for k in range(self.x) if self.__x > 0]
-            [print('#', end="") for j in range(self.width)]
+            [print(' ', end="") for k in range(self.__x) if self.__x > 0]
+            [print('#', end="") for j in range(self.__width)]
             print()
 
     def __str__(self):
