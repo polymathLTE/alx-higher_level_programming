@@ -10,7 +10,7 @@ dbname = sys.argv[3]
 db = MySQLdb.connect(user=username, passwd=password, db=dbname)
 cur = db.cursor()
 
-cur.execute("SELECT * FROM states")
+cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 st_list = cur.fetchall()
 for i in st_list:
     print(i)
