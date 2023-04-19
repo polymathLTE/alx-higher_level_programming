@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" selects a given name """
+""" Write a script that lists all cities from the database hbtn_0e_4_usa """
 import MySQLdb
 import sys
-
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -14,9 +13,10 @@ if __name__ == "__main__":
                          passwd=password, db=dbname)
     cur = db.cursor()
 
-    cur.execute(f"select * from states where name = '{search}' ORDER BY id")
+    cur.execute("SELECT cities.name FROM cities INNER JOIN states \
+    on cities.state_id=states.id where states.name = %s", (search, ))
     st_list = cur.fetchall()
-    for i in st_list:
-        print(i)
+    ls = list([i[0] for i in st_list])
+    print(*ls, sep=', ')
     cur.close()
     db.close()
