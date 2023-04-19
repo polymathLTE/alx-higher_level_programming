@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" displays the content of a database table """ 
+""" displays the content of a database table """
 import MySQLdb
 import sys
 
