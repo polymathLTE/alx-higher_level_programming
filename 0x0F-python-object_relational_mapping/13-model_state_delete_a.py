@@ -15,10 +15,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State)\
-                           .filter(State.name.like("%a%"))\
-                           .order_by(State.id):
-        if instance is None:
-            print("Nothing")
-        else:
-            print(instance.id, instance.name, sep=": ")
+    delstate = session.query(State).where(State.name.like("%a%"))
+    delstate.delete()
+    session.commit()

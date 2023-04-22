@@ -8,6 +8,7 @@ import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
+
 if __name__ == "__main__":
     # dialect+driver://username:password@host:port/database
     engine = create_engine(f"mysql+mysqldb://{sys.argv[2]}:\
@@ -15,10 +16,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State)\
-                           .filter(State.name.like("%a%"))\
-                           .order_by(State.id):
-        if instance is None:
-            print("Nothing")
-        else:
-            print(instance.id, instance.name, sep=": ")
+    newstate = State(name="Louisiana")
+
+    session.add(newstate)
+    session.commit()
+    instance = session.query(State).filter_by(name="Louisiana").first()
+    print(instance.id)
