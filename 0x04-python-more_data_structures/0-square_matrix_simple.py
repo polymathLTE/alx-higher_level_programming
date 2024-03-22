@@ -1,15 +1,9 @@
-#!/usr/bin/python3
-# Author - Lawal Emmanuel
+#!usr/bin/python3
+# Write a function that computes the square value
+# of all integers of a matrix.
+
 
 def square_matrix_simple(matrix=[]):
     """
-    function that computes the square value of all integers of a matrix
     """
-    new_matrix = []
-
-    def square(num):
-        num = num * num
-        return num
-
-    new_matrix = list(map(lambda row: list(map(square, row)), matrix))
-    return new_matrix
+    return [[i**2 for i in j] for j in matrix]

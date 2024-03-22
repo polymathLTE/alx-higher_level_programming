@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-# Author - Lawal Emmanuel
+# function that returns a new dictionary with all values multiplied by 2
+
 
 def multiply_by_2(a_dictionary):
     """
-    function that returns a new dictionary with all values multiplied by 2
     """
-    new_dict = {}
+    a_dictionary = a_dictionary.copy()
     for i in a_dictionary.keys():
-        temp_dict = {i: a_dictionary.get(i) * 2}
-        new_dict.update(temp_dict)
-    return new_dict
+        a_dictionary[i] = a_dictionary[i]*2
+    return a_dictionary
