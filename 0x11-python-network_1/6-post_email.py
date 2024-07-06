@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+script that sends a POST request and prints the response
+it uses the requests library
+
+Author - Lawal Emmanuel
+"""
+
 import requests
 import sys
 

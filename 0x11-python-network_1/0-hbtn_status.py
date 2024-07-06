@@ -13,6 +13,6 @@ if __name__ == "__main__":
         content = response.read()
 
         print(f"""Body response:
-        \t- type: {type(content)}
-        \t- content: {content}
-        \t- utf8 content: {content.decode('utf-8')}""")
+        - type: {type(content)}
+        - content: {content}
+        - utf8 content: {content.decode('utf-8')}""", end="")
