@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+Python script that fetches https://alx-intranet.hbtn.io/status
+
+it uses the 'requests' package
+Author - Lawal Emmanuel
+"""
+
 import requests
 
 if __name__ == "__main__":
