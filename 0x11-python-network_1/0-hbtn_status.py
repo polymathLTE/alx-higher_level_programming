@@ -15,4 +15,4 @@ if __name__ == "__main__":
         print(f"""Body response:
         - type: {type(content)}
         - content: {content}
-        - utf8 content: {content.decode('utf-8')}""", end="")
+        - utf8 content: {content.decode('utf-8')}""")
